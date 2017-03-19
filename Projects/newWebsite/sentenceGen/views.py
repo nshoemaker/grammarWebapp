@@ -208,3 +208,10 @@ def viewScores(request, teacher_id):
     quizzes = Quiz.objects.filter(teacher__startswith = teacher.code)
 
     return render(request, 'sentenceGen/viewScores.html', {'teacher':teacher, 'quizzes':quizzes})
+
+def lightningRound() 
+    sentence = newsentence()
+    question_id = makeQuestion(sentence)
+
+
+    return redirect('quiz1', quiz_id = nil, question_id = question_id)
